@@ -8,51 +8,51 @@ const Gallery = () => {
 
   const images = [
     {
-      url: "/fest.jpg",
-      title: "Shruthi 2024 Cultural Day - Team RMC",
-      description: "Over 200 students participated in our annual mathematics competition, solving complex problems and showcasing their analytical skills.",
-      date: "March 2024"
-    },
-    {
       url: "/parade.jpg",
       title: "RMC Club Parade",
-      description: "Undergraduate students presented their research findings in various fields of mathematics.",
+      description: "The RMC Club Parade at Shruthi 2024 was an exhilarating experience, filled with energy, enthusiasm, and unity. As we proudly marched through the campus, representing the Ramanujan Maths Club(RMC), the atmosphere was electrifying with cheers, colors, and creative banners. It was a moment of pure pride, showcasing our club’s vision, dedication, and impact. The parade wasn’t just about walking—it was about making a statement, celebrating our journey, and embracing the vibrant CBIT spirit. This unforgettable experience strengthened our bond and reminded us why Team RMC stands out! 🚩📸🔥 #RMCParade #Shruthi2024",
       date: "March 2024"
     },
     {
       url: "/miniminds.jpg",
       title: "Math for MiniMinds",
-      description: "Prof. Alan Thompson from MIT delivered an inspiring lecture on 'The Beauty of Prime Numbers' to a packed auditorium.",
+      description: "In collaboration with NSS CBIT, Team RMC brought the joy of mathematics to young learners through our Math for MiniMinds event. Visiting a school filled with eager students, we turned numbers into an exciting adventure with interactive puzzles, engaging games, and hands-on learning. Laughter and curiosity filled the air as we made math fun, accessible, and inspiring. Witnessing their enthusiasm and problem-solving spirit was truly rewarding. This experience reinforced our belief that learning is best when it’s enjoyable. A day of smiles, numbers, and limitless possibilities! 🧮✨ #MathForMiniMinds #RMCCBIT",
       date: "May 2024"
-    },
-    {
-      url: "/felicitation.jpg",
-      title: "Alumni Reunion",
-      description: "A hands-on workshop where students learned advanced problem-solving techniques for competitive mathematics.",
-      date: "October 2023"
     },
     {
       url: "/bootcamp.jpg",
       title: "Math For Machine Learning Bootcamp",
-      description: "Students showcased their mathematical models and projects, demonstrating real-world applications of mathematical concepts.",
+      description: "The Math for Machine Learning Bootcamp, hosted by Team RMC, was an insightful journey into the mathematical foundations of AI and ML. A highlight of the event was an enriching lecture by Dr. C.S. Sastry, Professor at IIT Hyderabad, who provided deep insights into linear algebra, probability, and optimization—key pillars of machine learning. Engaging sessions, hands-on problem-solving, and interactive discussions made complex concepts accessible and exciting. This bootcamp empowered participants with the mathematical intuition needed to excel in ML, blending theory with real-world applications. A perfect fusion of math, learning, and inspiration! 🔢🤖✨ #MathForML #RMCCBIT",
       date: "November 2024"
     },
     {
       url: "/code.jpg",
       title: "Code Crackers - Math X Coding ",
-      description: "A day-long celebration featuring mathematical games, puzzles, and interactive demonstrations.",
+      description: "Code Crackers, a unique Math × Coding event by Team RMC, blended logic, numbers, and programming into an exciting challenge. Participants dived into mathematical puzzles, algorithmic problems, and coding tasks that tested both their analytical and programming skills. The event pushed boundaries, encouraging creative problem-solving and logical reasoning. Whether decoding patterns, optimizing solutions, or cracking number-based algorithms, every challenge sparked curiosity and excitement. It was a thrilling experience where math and coding converged, proving that the best coders are also great mathematicians! A perfect fusion of logic, numbers, and code! 🔢💻✨ #CodeCrackers #MathXCode #RMCCBIT",
       date: "February 2024"
+    },
+    {
+      url: "/fest.jpg",
+      title: "Shruthi 2024 Cultural Day - Team RMC",
+      description: "Shruthi 2024 was an unforgettable celebration of culture, creativity, and camaraderie. As Team RMC, we were thrilled to be part of this electrifying event, where art, music, and dance came alive. From mesmerizing performances to energetic competitions, every moment was filled with passion and joy. The vibrant atmosphere, enthusiastic participants, and roaring cheers made it an experience to cherish forever. It wasn’t just a cultural day; it was a festival of  unity and unforgettable memories. Shruthi 2024 will always hold a special place in our hearts! 🎭🎶🔥 #TeamRMC #Shruthi2024",
+      date: "March 2024"
+    },
+    {
+      url: "/felicitation.jpg",
+      title: "Alumni Reunion",
+      description: "The RMC Alumni Reunion was a heartfelt celebration, bringing together the pillars of our club—our beloved alumni. We had the privilege of felicitating those who dedicated their time and passion to Team RMC, shaping it into what it is today. The event was filled with nostalgia, laughter, and shared memories, as past and present members came together to relive the journey. Their stories, experiences, and guidance continue to inspire us, strengthening the RMC legacy. It wasn’t just a reunion—it was a homecoming, a celebration of friendship and growth. Once RMC, always RMC! 🎙️📸✨ #RMCReunion #ForeverRMC",
+      date: "October 2023"
     },
     {
       url: "/poster.jpg",
       title: "Poster Launch",
-      description: "Teams from various colleges competed in our annual mathematics quiz championship.",
+      description: "The Sudhee 2024 Poster Launch was a moment of excitement and anticipation, marking the official countdown to CBIT’s most awaited techno-cultural fest. Team RMC proudly unveiled the vibrant and dynamic poster, capturing the essence of innovation, culture, and excellence that Sudhee represents. The launch was met with cheers, energy, and enthusiasm, setting the stage for an unforgettable event. This moment symbolized months of dedication and creativity, bringing together students, faculty, and organizers in celebration. With the spirit of Sudhee 2024 ignited, we are ready to create history! Let the countdown begin! 🚀🎭✨ #Sudhee2024 #PosterLaunch #RMCCBIT",
       date: "January 2024"
     },
     {
       url: "/book.jpg",
       title: "Mathematics for ML - Book Launch",
-      description: "A week-long celebration of mathematics featuring competitions, lectures, and workshops.",
+      description: "As part of the Math for Machine Learning Bootcamp, Team RMC proudly hosted the launch of Mathematics for ML, a book dedicated to building strong mathematical foundations for machine learning. The event was graced by Dr. C.S. Sastry, Professor at IIT Hyderabad, whose insights into the subject added immense value. The book serves as a guiding resource, covering essential concepts like linear algebra, probability, and optimization. This launch marked a significant step in making ML education more accessible and structured. A milestone moment in our journey of learning and innovation! 📖🤖✨ #MathForML #BookLaunch #RMCCBIT",
       date: "December 2024"
     }
   ];

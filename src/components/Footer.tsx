@@ -10,10 +10,10 @@ const Footer = () => {
       phone: "+91 96187 78184"
     },
     {
-      name: "Trishika Reddy",
+      name: "Vishwas Yeleshwaram",
       role: "Student Conveyer",
-      email: "sadalathrishikareddy@gmail.com",
-      phone: "+91 93925 92678"
+      email: "yvishwas40@gmail.com",
+      phone: "+91 93923 60632"
     }
   ];
 
