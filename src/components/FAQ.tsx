@@ -7,21 +7,26 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "How to join RMC?",
-      answer: "To join RMC, fill out the membership form available on our website and attend our orientation session. Annual membership fee is ₹500."
-    },
-    {
       question: "What are Mathletes?",
-      answer: "Mathletes is our annual mathematics festival featuring competitions, workshops, and guest lectures designed to challenge and inspire mathematical thinking."
+      answer: "Mathletes is our annual mathematics festival as part of technical fest Sudhee, featuring competitions, workshops, and guest lectures designed to challenge and inspire mathematical thinking."
     },
     {
       question: "How to register for events?",
-      answer: "Click on the 'Register Now' button on any event page. You'll need to create an account if you haven't already, then follow the registration process for your chosen event."
+      answer: "Click on the 'Register Now' button on any event page and you will be redirected to google form of individual event. You can complete your regestration in it"
     },
     {
-      question: "What are the benefits of joining RMC?",
-      answer: "Members get priority registration for events, access to our weekly problem-solving sessions, mentorship opportunities, and networking with fellow mathematics enthusiasts."
+      question: "What if we have any queries regarding the events and regestration process?",
+      answer: "Event coordinators details are mentioned below and you can submit a query on this website which will be resolved by our team"
+    },
+    {
+      question: "Are payments and regestrations done through this website only?",
+      answer: "Each individual event regestarions are done through the gforms only* and payment should also needed to be done to the qr provided in the sheet"
+    },
+    {
+      question: "How to join RMC?",
+      answer: "We conduct recruitment every year for students of 1st and 2nd years, stay tuned to our instagram for more updates"
     }
+    
   ];
 
   return (
