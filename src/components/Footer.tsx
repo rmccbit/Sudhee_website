@@ -83,10 +83,10 @@ const Footer = () => {
               <a href="#" className="hover:text-indigo-400 transition-colors">
                 <Twitter className="h-6 w-6" />
               </a>
-              <a href="#" className="hover:text-indigo-400 transition-colors">
+              <a href="https://www.instagram.com/rmc.cbit?igsh=eXB4Y2x4bW8yeTN5" className="hover:text-indigo-400 transition-colors">
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="#" className="hover:text-indigo-400 transition-colors">
+              <a href="https://www.linkedin.com/company/ramanujan-maths-club/" className="hover:text-indigo-400 transition-colors">
                 <Linkedin className="h-6 w-6" />
               </a>
             </div>
