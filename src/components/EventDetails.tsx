@@ -25,7 +25,8 @@ const eventData = {
       second: "₹7,000",
       third: "₹5,000"
     },
-    image: "/paper.png"
+    image: "/paper.png",
+    externalLink: "https://example.com/paper-presentation"
   },
   'guest-talk': {
     title: "Guest Talk",
@@ -41,35 +42,35 @@ const eventData = {
       designation: "Professor of Mathematics, MIT",
       topic: "The Beauty of Prime Numbers"
     },
-    image: "/guest.png"
+    image: "/guest.png",
+    externalLink: "https://example.com/guest-talk"
   },
   'math-hunt': {
     title: "Math Hunt",
     description: "An exciting treasure hunt with mathematical puzzles and clues.",
-    longDescription: `Embark on an adventurous journey across the campus, solving mathematical puzzles and riddles. 
-    This event combines physical activity with mathematical problem-solving in a unique and exciting format.`,
-    fee: "₹200 per team",
-    venue: "College Campus",
-    date: "March 16, 2024",
-    time: "2:00 PM - 5:00 PM",
+    longDescription: `Maths Hunt is an interactive math-based puzzle-solving competition designed to test problem-solving skills, logical thinking, and time management.`,
+    fee: "₹100/- per team of 2",
+    venue: "College Campus, near K-block",
+    date: "March 4 and 5, 2025",
+    time: "10:00 AM - 3:00 PM",
     rules: [
-      "Team size: 4 members",
+      "Team participation only (2 per team).",
       "All clues must be solved in sequence",
-      "Use of calculators is permitted",
-      "Time limit: 3 hours"
+      "Each correct solution leads to the next block.",
+      "No external help, mobile use, or shortcuts allowed.",
+      "The team finishing in the shortest time wins."
     ],
     prizes: {
-      first: "₹8,000",
-      second: "₹5,000",
-      third: "₹3,000"
+      first: "₹1,000",
+      second: "₹500",
     },
-    image: "/mathhunt.png"
+    image: "/mathhunt.png",
+    externalLink: "https://example.com/math-hunt"
   },
   'math-relay': {
     title: "Math Relay",
     description: "Team-based mathematical problem-solving race against time.",
-    longDescription: `A high-energy mathematical competition where teams solve problems in relay format. 
-    Each team member must complete their section before passing to the next, testing both speed and accuracy.`,
+    longDescription: `A high-energy mathematical competition where teams solve problems in relay format.`,
     fee: "₹250 per team",
     venue: "Mathematics Block",
     date: "March 17, 2024",
@@ -85,13 +86,13 @@ const eventData = {
       second: "₹8,000",
       third: "₹5,000"
     },
-    image: "/relay.png"
+    image: "/relay.png",
+    externalLink: "https://example.com/math-relay"
   },
   'math-squid-game': {
     title: "Math x Squid Game",
     description: "Mathematical challenges inspired by popular games with eliminations.",
-    longDescription: `Experience the thrill of Squid Game combined with mathematical challenges. 
-    Participants face elimination rounds with increasing difficulty, testing their mathematical skills under pressure.`,
+    longDescription: `Experience the thrill of Squid Game combined with mathematical challenges.`,
     fee: "₹400 per person",
     venue: "College Ground",
     date: "March 17, 2024",
@@ -107,7 +108,8 @@ const eventData = {
       second: "₹10,000",
       third: "₹7,000"
     },
-    image: "/squidgame.png"
+    image: "/squidgame.png",
+    externalLink: "https://example.com/math-squid-game"
   }
 };
 
@@ -168,61 +170,13 @@ const EventDetails = () => {
                     <span>{event.fee}</span>
                   </div>
                 </div>
-
-                {event.rules && (
-                  <div className="space-y-4">
-                    <h3 className="text-xl font-semibold text-white">Rules</h3>
-                    <ul className="list-disc list-inside text-gray-300 space-y-2">
-                      {event.rules.map((rule, index) => (
-                        <li key={index}>{rule}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
               </div>
 
               <div className="space-y-6">
-                {event.prizes && (
-                  <div className="bg-gray-700 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-                      <Trophy className="mr-2 text-yellow-400" />
-                      Prizes
-                    </h3>
-                    <div className="space-y-4">
-                      <div className="flex justify-between items-center">
-                        <span className="text-gray-300">First Prize</span>
-                        <span className="text-yellow-400 font-semibold">{event.prizes.first}</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-gray-300">Second Prize</span>
-                        <span className="text-gray-400 font-semibold">{event.prizes.second}</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-gray-300">Third Prize</span>
-                        <span className="text-gray-400 font-semibold">{event.prizes.third}</span>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {event.speaker && (
-                  <div className="bg-gray-700 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-white mb-4">Speaker Details</h3>
-                    <div className="space-y-2">
-                      <p className="text-gray-300">
-                        <span className="font-semibold">Name:</span> {event.speaker.name}
-                      </p>
-                      <p className="text-gray-300">
-                        <span className="font-semibold">Designation:</span> {event.speaker.designation}
-                      </p>
-                      <p className="text-gray-300">
-                        <span className="font-semibold">Topic:</span> {event.speaker.topic}
-                      </p>
-                    </div>
-                  </div>
-                )}
-
-                <button className="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors">
+                <button
+                  className="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors"
+                  onClick={() => window.location.href = event.externalLink}
+                >
                   Register Now
                 </button>
               </div>
