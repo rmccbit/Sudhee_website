@@ -19,7 +19,7 @@ const FAQ = () => {
       answer: "Event coordinators details are mentioned below and you can submit a query on this website which will be resolved by our team"
     },
     {
-      question: "Are payments and regestrations done through this website only?",
+      question: "Are payments and registrations done through this website only?",
       answer: "Each individual event regestarions are done through the gforms only* and payment should also needed to be done to the qr provided in the sheet"
     },
     {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
@@ -57,6 +57,14 @@ const Gallery = () => {
     }
   ];
 
+  // Auto-slide every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextImage();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
   const nextImage = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
@@ -66,55 +74,56 @@ const Gallery = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-white mb-12">Past Events Gallery</h2>
-        
-        {/* Carousel */}
-        <div className="relative">
-          <div className="overflow-hidden">
-            <div className="flex transition-transform duration-500 ease-in-out" 
-                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-              {images.map((image, index) => (
-                <div key={index} className="min-w-full px-4">
-                  <motion.div
-                    className="relative group cursor-pointer"
-                    whileHover={{ scale: 1.02 }}
-                    onClick={() => setSelectedImage(index)}
-                  >
-                    <img
-                      src={image.url}
-                      alt={image.title}
-                      className="w-full h-[500px] object-cover rounded-lg"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 className="text-xl font-semibold text-white mb-2">{image.title}</h3>
-                        <p className="text-gray-300">{image.date}</p>
-                      </div>
-                    </div>
-                  </motion.div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          <button
-            onClick={prevImage}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full hover:bg-black/70 transition-colors"
+    <section className="py-20 bg-black relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-bold text-center text-white mb-12">
+          Past Events Gallery
+        </h2>
+
+        {/* Image Slider */}
+        <div className="relative w-full overflow-hidden rounded-lg shadow-lg">
+          <motion.div
+            className="flex transition-transform duration-500 ease-in-out"
+            animate={{ x: `-${currentIndex * 100}%` }}
           >
-            <ChevronLeft className="h-6 w-6 text-white" />
-          </button>
-          
-          <button
-            onClick={nextImage}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full hover:bg-black/70 transition-colors"
-          >
-            <ChevronRight className="h-6 w-6 text-white" />
-          </button>
+            {images.map((image, index) => (
+              <div key={index} className="min-w-full px-2">
+                <motion.div
+                  className="relative group cursor-pointer"
+                  whileHover={{ scale: 1.02 }}
+                  onClick={() => setSelectedImage(index)}
+                >
+                  <img
+                    src={image.url}
+                    alt={image.title}
+                    className="w-full h-[500px] object-cover rounded-lg"
+                  />
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex flex-col justify-end p-6">
+                    <h3 className="text-2xl font-bold text-white">{image.title}</h3>
+                    <p className="text-gray-300">{image.date}</p>
+                  </div>
+                </motion.div>
+              </div>
+            ))}
+          </motion.div>
         </div>
 
-        {/* Modal */}
+        {/* Navigation Buttons */}
+        <button
+          onClick={prevImage}
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 p-3 rounded-full hover:bg-black/80 transition"
+        >
+          <ChevronLeft className="h-6 w-6 text-white" />
+        </button>
+
+        <button
+          onClick={nextImage}
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 p-3 rounded-full hover:bg-black/80 transition"
+        >
+          <ChevronRight className="h-6 w-6 text-white" />
+        </button>
+
+        {/* Modal Popup */}
         <AnimatePresence>
           {selectedImage !== null && (
             <motion.div
@@ -123,26 +132,27 @@ const Gallery = () => {
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
             >
-              <div className="relative max-w-4xl w-full bg-gray-800 rounded-lg overflow-hidden">
+              <div className="relative max-w-4xl w-full bg-gray-800 rounded-lg overflow-hidden shadow-xl">
                 <button
                   onClick={() => setSelectedImage(null)}
                   className="absolute right-4 top-4 text-white hover:text-gray-300 z-10"
                 >
                   <X className="h-6 w-6" />
                 </button>
-                <img
+                <motion.img
                   src={images[selectedImage].url}
                   alt={images[selectedImage].title}
-                  className="w-full h-[400px] object-cover"
+                  className="w-full h-[450px] object-cover"
+                  initial={{ scale: 0.7 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.2 }}
                 />
                 <div className="p-6">
-                  <h3 className="text-2xl font-semibold text-white mb-2">
+                  <h3 className="text-2xl font-bold text-white mb-2">
                     {images[selectedImage].title}
                   </h3>
                   <p className="text-gray-300 mb-2">{images[selectedImage].date}</p>
-                  <p className="text-gray-400">
-                    {images[selectedImage].description}
-                  </p>
+                  <p className="text-gray-400">{images[selectedImage].description}</p>
                 </div>
               </div>
             </motion.div>

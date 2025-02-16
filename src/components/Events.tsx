@@ -11,41 +11,41 @@ const Events = () => {
       title: "Paper Presentation",
       description: "Present your mathematical research and ideas in front of experts.",
       icon: Presentation,
-      fee: "₹300 per team",
-      venue: "Mathematics Department Seminar Hall",
-      externalLink: "https://maths-paper-presentation.netlify.app/" // Change this to your actual link
+      fee: "₹400 per team of 2",
+      venue: "CDC seminar hall",
+      externalLink: "https://maths-paper-presentation.netlify.app/" 
     },
     {
       id: 'guest-talk',
       title: "Guest Talk",
-      description: "Interactive sessions with distinguished mathematicians sharing their insights.",
+      description: "Explore the profound role of statistics in shaping artificial intelligence",
       icon: Users,
       fee: "Free Entry",
-      venue: "Main Auditorium"
+      venue: "soft skills lab"
     },
     {
       id: 'math-hunt',
       title: "Math Hunt",
       description: "An exciting treasure hunt with mathematical puzzles and clues.",
       icon: MapPin,
-      fee: "₹200 per team",
-      venue: "College Campus"
+      fee: "₹100 per team of 2",
+      venue: "Near K-Block"
     },
     {
       id: 'math-relay',
       title: "Math Relay",
       description: "Team-based mathematical problem-solving race against time.",
       icon: Trophy,
-      fee: "₹250 per team",
-      venue: "Mathematics Block"
+      fee: "₹80 for team of 4",
+      venue: "Near K-Block"
     },
     {
       id: 'math-squid-game',
       title: "Math x Squid Game",
-      description: "Mathematical challenges inspired by popular games with eliminations.",
+      description: "Math Squid Challenge  Outsmart, Strategize, Survive!",
       icon: Gamepad2,
-      fee: "₹400 per person",
-      venue: "College Ground"
+      fee: "₹50 per person",
+      venue: "Near power house"
     }
   ];
 
