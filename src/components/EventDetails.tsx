@@ -36,12 +36,13 @@ const eventData = {
     date: "March 4, 2025",
     time: "11:00 AM - 1:00 PM",
     speaker: {
-      name: "Dr. Sarah Johnson",
-      designation: "Professor of Mathematics, MIT",
-      topic: "The Beauty of Prime Numbers"
+      // name: "Dr. Sarah Johnson",
+      // designation: "Professor of Mathematics, MIT",
+      venue: "soft skills lab",
+      topic: "Statistics for shaping Artificial Intelligence"
     },
     image: "/guest.png",
-    externalLink: "https://example.com/guest-talk"
+    externalLink: "https://chat.whatsapp.com/GkXkNVqIKtC2AqDpINdj5X"
   },
   'math-hunt': {
     title: "Math Hunt",
@@ -204,14 +205,14 @@ const EventDetails = () => {
 
                 {event.speaker && (
                   <div className="bg-gray-700 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-white mb-4">Speaker Details</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">Guest Talk</h3>
                     <div className="space-y-2">
-                      <p className="text-gray-300">
+                      {/* <p className="text-gray-300">
                         <span className="font-semibold">Name:</span> {event.speaker.name}
                       </p>
                       <p className="text-gray-300">
                         <span className="font-semibold">Designation:</span> {event.speaker.designation}
-                      </p>
+                      </p> */}
                       <p className="text-gray-300">
                         <span className="font-semibold">Topic:</span> {event.speaker.topic}
                       </p>

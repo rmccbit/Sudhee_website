@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Calculator, Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const coordinators = [
@@ -79,9 +79,6 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a href="#" className="hover:text-indigo-400 transition-colors">
                 <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="hover:text-indigo-400 transition-colors">
-                <Twitter className="h-6 w-6" />
               </a>
               <a href="https://www.instagram.com/rmc.cbit?igsh=eXB4Y2x4bW8yeTN5" className="hover:text-indigo-400 transition-colors">
                 <Instagram className="h-6 w-6" />
