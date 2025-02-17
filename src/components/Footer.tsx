@@ -11,7 +11,7 @@ const Footer = () => {
     },
     {
       name: "Vishwas Yeleshwaram",
-      role: "Student Conveyer",
+      role: "Student Convenor",
       email: "yvishwas40@gmail.com",
       phone: "+91 93923 60632"
     }

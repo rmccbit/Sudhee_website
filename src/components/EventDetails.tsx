@@ -87,7 +87,7 @@ const eventData = {
       second: "₹500",
     },
     image: "/relay.png",
-    externalLink: "https://forms.gle/2eoDtSfhbsFrxqoq6"
+    externalLink: "https://docs.google.com/forms/d/e/1FAIpQLSeSFy9KAz6rROepwsfsjt6EVyBTpA4Yz_Zd0Bs5bHwQZZYQGA/viewform"
   },
   'math-squid-game': {
     title: "Math x Squid Game",
