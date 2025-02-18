@@ -11,7 +11,7 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Query from './components/Query';
-
+import { Analytics } from "@vercel/analytics/react";
 function App() {
   return (
     <Router>
@@ -33,6 +33,7 @@ function App() {
         <Footer />
         <ScrollToTop />
         <Query />
+        <Analytics />
       </div>
     </Router>
   );
