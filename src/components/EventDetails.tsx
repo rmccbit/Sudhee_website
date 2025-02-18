@@ -222,7 +222,7 @@ const EventDetails = () => {
 
                 <button 
                     className="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors"
-                    onClick={() => window.location.href = id === 'guest-talk' ? 'https://example.com/guest-talk-group' : event.externalLink}
+                    onClick={() => window.location.href = id === 'guest-talk' ? 'https://chat.whatsapp.com/GkXkNVqIKtC2AqDpINdj5X' : event.externalLink}
                     >
                     {id === 'guest-talk' ? "Join the Group for Updates" : "Register Now"}
                 </button>
