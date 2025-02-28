@@ -36,9 +36,9 @@ const eventData = {
     date: "March 4, 2025",
     time: "11:00 AM - 1:00 PM",
     speaker: {
-      // name: "Dr. Sarah Johnson",
-      // designation: "Professor of Mathematics, MIT",
-      venue: "soft skills lab",
+      name: " Dr Mallikarjuna Reddy Doodipala",
+      designation: " Associate  Professor (Senior) & Data analyst, Geetam",
+      venue: "CDC seminar hall",
       topic: "Statistics for shaping Artificial Intelligence"
     },
     image: "/guest.png",
@@ -207,12 +207,12 @@ const EventDetails = () => {
                   <div className="bg-gray-700 rounded-lg p-6">
                     <h3 className="text-xl font-semibold text-white mb-4">Guest Talk</h3>
                     <div className="space-y-2">
-                      {/* <p className="text-gray-300">
+                      <p className="text-gray-300">
                         <span className="font-semibold">Name:</span> {event.speaker.name}
                       </p>
                       <p className="text-gray-300">
                         <span className="font-semibold">Designation:</span> {event.speaker.designation}
-                      </p> */}
+                      </p> 
                       <p className="text-gray-300">
                         <span className="font-semibold">Topic:</span> {event.speaker.topic}
                       </p>
