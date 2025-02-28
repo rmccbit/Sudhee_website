@@ -9,19 +9,19 @@ const Team = () => {
       image: "/mamta.jpg",
     },
     {
-      name: "Trishika Reddy",
+      name: "Devansh Makam",
       role: "President",
-      image: "/trishika.jpg",
+      image: "/devansh.jpg",
     },
     {
-      name: "Shruthi Reddy",
+      name: "Vishwas",
       role: "Vice President",
-      image: "/Shruthi.jpg",
+      image: "/vishwaa.jpg",
     },
     {
-      name: "Aishwaraya Bura",
+      name: "Praneeth Bende",
       role: "Vice President",
-      image: "/aishwarya.jpeg",
+      image: "/praneeth.jpeg",
     }
   ];
 
